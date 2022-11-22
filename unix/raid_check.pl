@@ -16,7 +16,7 @@ GetOptions (
     "vdisk:i"       => \$vdisk_id
 ) or die("Error in command line arguments\n");
 
-my $cli = '/usr/bin/sudo /opt/MegaRAID/CmdTool2/CmdTool2';
+my $cli = '/usr/bin/sudo /opt/MegaRAID/CmdTool2/CmdTool264';
 
 die("Mode is not defined. Use --mode paramater") if !defined $mode;
 die("Adapter is not defined. Use --adapter paramater") if !defined $adapter;

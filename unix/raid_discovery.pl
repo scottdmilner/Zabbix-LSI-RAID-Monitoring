@@ -3,8 +3,8 @@
 use strict;
 use warnings;
 
-my $cli             = '/opt/MegaRAID/MegaCli/MegaCli64';
-my $zabbix_config   = '/etc/zabbix_agentd.conf';
+my $cli             = '/usr/bin/sudo /opt/MegaRAID/MegaCli/MegaCli64';
+my $zabbix_config   = '/etc/zabbix/zabbix_agentd.conf';
 my $zabbix_sender   = '/usr/bin/zabbix_sender';
 my $tmp_path        = '/tmp/raid-discovery-zsend-data.tmp';
 my %enclosures      = ();

@@ -67,11 +67,12 @@ UserParameter=hw.raid.bbu[*],/usr/bin/perl -w /etc/zabbix/scripts/raid_check.pl 
 UserParameter=hw.raid.adapter[*],/usr/bin/perl -w /etc/zabbix/scripts/raid_check.pl -mode adapter -item $2 -adapter $1
 ```
 
-for agents on unix servers RAID tool should be executed via sudo, add this to sudoers file:
+for agents on unix servers RAID tool should be executed via sudo, add this to sudoers file (`sudo visudo`):
 ```
 Defaults:zabbix !requiretty
 # path to your tool can be different
-zabbix  ALL=NOPASSWD:/opt/MegaRAID/CmdTool2/CmdTool2
+zabbix  ALL=NOPASSWD:/opt/MegaRAID/CmdTool2/CmdTool264
+zabbix  ALL=NOPASSWD:/opt/MegaRAID/MegaCli/MegaCli64
 ```
 
 I'm not a programmer, so code review will be appreciated :)

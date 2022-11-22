@@ -75,4 +75,17 @@ zabbix  ALL=NOPASSWD:/opt/MegaRAID/CmdTool2/CmdTool264
 zabbix  ALL=NOPASSWD:/opt/MegaRAID/MegaCli/MegaCli64
 ```
 
+## Scheduled Tasks
+
+The script raid_trapper_checks must be run via cron/scheduled tasks. There is a trigger defined that alerts when the data is older than 10 minutes, so the script should be executed every 5 minutes or so.
+
+### Windows
+
+Adapt the paths in `raid_trapper_checks_task.xml` to your needs and import it in the Task Scheduler.
+
+### Linux/Unix
+
+    # crontab -e -u zabbix
+    */5 * * * * perl /etc/zabbix/scripts/raid_trapper_check.pl
+
 I'm not a programmer, so code review will be appreciated :)
